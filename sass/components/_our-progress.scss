@@ -1,0 +1,36 @@
+.our-progress {
+    padding-bottom: 94px;
+  }
+  
+  .progress-link {
+    position: relative;
+    list-style: none;
+    margin-right: 30px;
+  }
+  
+  .progress-link:nth-child(3) {
+    margin: 0;
+  }
+  
+  .progress-img {
+    display: block;
+  }
+  
+  .progress-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 27px 82px;
+  
+    color: $white-brand-color;
+  
+    background-color: rgba(47, 48, 58, 0.8);
+  }
