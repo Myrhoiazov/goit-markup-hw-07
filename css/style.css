@@ -932,6 +932,11 @@ body {
   outline: none;
 }
 
+.form-input:hover{
+  border-color: var(--blu-brand-color);
+
+}
+
 .form-label {
   display: inline-block;
 
