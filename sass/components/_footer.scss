@@ -1,6 +1,8 @@
 .footer {
   background-color: $brand-color-footer;
   padding: 60px 0;
+
+  color: $white-brand-color;
 }
 
 .footer-logo {
@@ -17,7 +19,11 @@
   margin-bottom: 0;
 }
 
-.footer-contact .footer-map {
+.footer-contact .contact-link {
+  color: $grey-brand-color;
+}
+
+.contact .footer-map {
   color: $white-brand-color;
 }
 
