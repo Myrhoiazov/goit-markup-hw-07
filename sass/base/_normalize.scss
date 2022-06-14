@@ -13,7 +13,6 @@ h5,
 h6,
 p {
   margin: 0;
-  /* padding: 0; */
 }
 
 ul,
@@ -27,14 +26,10 @@ li {
   Use a better box model (opinionated).
   */
 
-html {
-  box-sizing: border-box;
-}
-
 *,
 ::before,
 ::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 /**
@@ -48,7 +43,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /*
