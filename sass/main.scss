@@ -190,9 +190,11 @@ body {
 .fixed__text {
   position: absolute;
   left: -200px;
-  top: -70px;
+  top: -90px;
 
   font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
   color: $white-brand-color;
 
   background-color: $blu-brand-color;
