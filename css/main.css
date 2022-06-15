@@ -1282,6 +1282,7 @@ body {
   height: 60px;
   border-radius: 50%;
   background-color: #2196f3;
+  box-shadow: 0 5px 10px rgba(70, 163, 224, 0.5);
 }
 
 .fixed-icon {
@@ -1301,13 +1302,13 @@ body {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
-  visibility: hidden;
   opacity: 0;
-  transition: opacity 250ms ease-in-out 250ms;
+  transform: scale(0.5) translate(60px, 40px);
+  transition: opacity 500ms ease-in-out 250ms, transform 500ms ease-in-out 250ms;
 }
 
 .fixed:hover .fixed__text {
-  visibility: visible;
+  transform: scale(1) translate(0);
   opacity: 1;
 }
 
