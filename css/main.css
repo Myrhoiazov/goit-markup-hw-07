@@ -877,7 +877,6 @@ summary {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.4);
-  visibility: visible;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -885,11 +884,7 @@ summary {
 .box-model.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
-}
-
-.box-model.is-hidden .form {
-  transform: scale(0);
+  transform: scale(1);
 }
 
 .form {
@@ -902,6 +897,10 @@ summary {
   border-radius: 4px;
   transform: scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box-model.is-hidden .form {
+  transform: scale(0);
 }
 
 .form-title {
@@ -955,9 +954,6 @@ summary {
 
 .form-label {
   display: inline-block;
-  /* position: absolute;
-  top: -50%;
-  left: 0; */
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
