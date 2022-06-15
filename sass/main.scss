@@ -158,14 +158,23 @@ body {
   margin-bottom: 50px;
 }
 
+
+// CALL BACK
+
 .fixed {
   position: fixed;
 
   right: 50px;
   bottom: 50px;
+
+  box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
+  border-radius: 50%;
+
+
 }
 .fixed__link {
-  display: inline-flex;
+  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -184,16 +193,15 @@ body {
 
 .fixed__text {
   position: absolute;
-
   left: -200px;
   top: -70px;
 
-  width: 300px;
+  font-size: 14px;
   color: $white-brand-color;
 
   background-color: $blu-brand-color;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 
   box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
 
@@ -208,7 +216,7 @@ body {
   &::after {
     content: '';
     position: absolute;
-    right: 60px;
+    right: 20px;
     bottom: -10px;
     width: 0;
     height: 0;

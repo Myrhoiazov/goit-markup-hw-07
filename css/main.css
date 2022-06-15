@@ -1272,10 +1272,13 @@ body {
   position: fixed;
   right: 50px;
   bottom: 50px;
+  box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
+  border-radius: 50%;
 }
 
 .fixed__link {
-  display: inline-flex;
+  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
@@ -1295,11 +1298,11 @@ body {
   position: absolute;
   left: -200px;
   top: -70px;
-  width: 300px;
+  font-size: 14px;
   color: #fff;
   background-color: #2196f3;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
   opacity: 0;
   transition: opacity 250ms ease-in-out 250ms;
@@ -1312,7 +1315,7 @@ body {
 .fixed__text::after {
   content: '';
   position: absolute;
-  right: 60px;
+  right: 20px;
   bottom: -10px;
   width: 0;
   height: 0;
