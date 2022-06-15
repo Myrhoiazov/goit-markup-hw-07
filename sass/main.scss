@@ -158,3 +158,43 @@ body {
 
   margin-bottom: 50px;
 }
+
+.fixed__text{
+  position: absolute;
+
+  left: -200px;
+  top: -70px;
+
+  width: 300px;
+  color: $white-brand-color;
+
+  background-color: $blu-brand-color;
+  border-radius: 5px;
+  padding: 5px;
+
+  box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
+
+  opacity: 0;
+
+  transition: opacity 250ms ease-in-out 250ms;
+
+  .fixed:hover & {
+    opacity: 1;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    right: 60px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+
+    border-left: 10px solid transparent ;
+    border-right: 10px solid transparent ;
+    border-top: 10px solid $blu-brand-color;
+
+  box-shadow: 0 5px 15px rgba(70, 163, 224, 0.3);
+
+  }
+}
