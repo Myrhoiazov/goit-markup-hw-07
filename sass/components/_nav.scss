@@ -6,8 +6,7 @@
   flex-wrap: wrap;
 }
 
-.nav__items,
-.contact {
+.nav__items {
   list-style: none;
   display: flex;
 }
@@ -60,6 +59,7 @@
 
 .header__contact {
   margin-left: auto;
+  display: flex;
 }
 
 .header__contact .contact__item + .contact__item {
