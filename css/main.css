@@ -1160,7 +1160,11 @@ summary {
 }
 
 .form-chekbox:focus {
-  outline: 1px solid #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.chekbox-input:focus + .chekbox-icon {
+  border: 1px solid #2196f3;
 }
 
 .chekbox-icon {
@@ -1171,6 +1175,10 @@ summary {
   border: 2px solid #757575;
   background-color: transparent;
   transition: background-color 250ms ease;
+}
+
+.chekbox-input:focus .chekbox-icon {
+  background-color: #2196f3;
 }
 
 .chekbox-input:checked ~ .chekbox-icon {
@@ -1229,7 +1237,7 @@ summary {
   right: 8px;
   width: 30px;
   height: 30px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
