@@ -1,22 +1,18 @@
-.nav-wrapper {
+
+
+.nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.nav-list,
-.nav-contact {
+.nav__items,
+.header__contact {
   list-style: none;
   display: flex;
 }
 
-.nav-list .nav-link {
+.nav__items .nav__link {
   display: block;
 
   padding: 32px 0;
@@ -31,35 +27,16 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list .nav-link:hover,
-.nav-list .nav-link:focus {
+.nav__items .nav__link:hover,
+.nav__items .nav__link:focus {
   color: $blu-brand-color;
 }
 
-.nav-list .item + .item {
-  margin-left: 50px;
-}
-.nav-contact .item + .item {
+.nav__items .nav__item + .nav__item {
   margin-left: 50px;
 }
 
-.header-contact {
-  margin-left: auto;
-}
-
-.header-contact .contact-link {
-  display: flex;
-  align-items: center;
-  color: $grey-brand-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  font-style: normal;
-  text-decoration: none;
-}
-
-.nav-list .primary {
+.nav__items .primary {
   display: block;
   position: relative;
 
@@ -68,7 +45,7 @@
   color: $blu-brand-color;
 }
 
-.nav-list .primary::after {
+.nav__items .primary::after {
   content: '';
   display: block;
   position: absolute;
@@ -80,3 +57,49 @@
   border-radius: 2px;
   background-color: $blu-brand-color;
 }
+
+.contact {
+  margin-left: auto;
+}
+
+.header__contact .contact__item + .contact__item {
+  margin-left: 50px;
+}
+
+.contact__items .contact__link {
+  display: flex;
+  align-items: center;
+  color: $grey-brand-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.contact__items .contact__link:hover,
+.contact__items .contact__link:focus {
+  color: $blu-brand-color;
+}
+
+.icon{
+  margin-right: 10px;
+  fill: currentColor;
+
+  & .icon__envelope {
+    width: 16px;
+    height: 12px;
+    
+  }
+
+  & .icon__smartphone {
+    width: 10px;
+    height: 16px;
+  }
+
+}
+
+
+
+
