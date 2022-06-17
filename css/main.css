@@ -318,7 +318,7 @@ summary {
 }
 
 .nav__items,
-.header__contact {
+.contact {
   list-style: none;
   display: flex;
 }
@@ -371,7 +371,7 @@ summary {
   margin-left: 50px;
 }
 
-.contact__items .contact__link {
+.contact .contact__link {
   display: flex;
   align-items: center;
   color: #757575;
@@ -383,8 +383,8 @@ summary {
   text-decoration: none;
 }
 
-.contact__items .contact__link:hover,
-.contact__items .contact__link:focus {
+.contact .contact__link:hover,
+.contact .contact__link:focus {
   color: #2196f3;
 }
 
