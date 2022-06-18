@@ -14,12 +14,12 @@
   opacity: 1;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.box-model.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1);
+  }
 }
 
 .form {
@@ -37,13 +37,13 @@
 
   transform: scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .box-model.is-hidden & {
+    transform: scale(0);
+  }
 }
 
-.box-model.is-hidden .form {
-  transform: scale(0);
-}
-
-.form-title {
+.form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -54,7 +54,8 @@
 
   margin-bottom: 12px;
 }
-.form-field {
+
+.form__field {
   position: relative;
 
   display: block;
@@ -65,16 +66,7 @@
   margin-bottom: 10px;
 }
 
-.form-field:focus-within .icon {
-  fill: $blu-brand-color;
-}
-
-.form-field:focus-within .form-label,
-.form-field:focus-within .textarea-label {
-  color: $blu-brand-color;
-}
-
-.form-input {
+.form__input {
   display: inline-block;
   width: 100%;
   height: 40px;
@@ -87,18 +79,18 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  &:focus {
+    border-color: $blu-brand-color;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $blu-brand-color;
+  }
 }
 
-.form-input:focus {
-  border-color: $blu-brand-color;
-  outline: none;
-}
-
-.form-input:hover {
-  border-color: $blu-brand-color;
-}
-
-.form-label {
+.form__label {
   display: inline-block;
 
   font-weight: 400;
@@ -109,13 +101,17 @@
   color: $grey-brand-color;
 
   margin-bottom: 4px;
+
+  .form__field:focus-within & {
+    color: $blu-brand-color;
+  }
 }
 
 .textarea {
   position: relative;
 }
 
-.textarea-label {
+.textarea__label {
   display: inline-block;
 
   font-weight: 400;
@@ -126,9 +122,13 @@
   color: $grey-brand-color;
 
   margin-bottom: 4px;
+
+  .form__field:focus-within & {
+    color: $blu-brand-color;
+  }
 }
 
-.form-area {
+.form__area {
   display: block;
   height: 120px;
   padding: 12px 16px;
@@ -140,7 +140,8 @@
 
   resize: none;
 }
-.form-icon {
+
+.form__icon {
   display: inline-block;
   position: absolute;
 
@@ -150,12 +151,17 @@
   width: 18px;
   height: 18px;
 }
+
 .icon {
   width: 15px;
   height: 12px;
+
+  .form__field:focus-within & {
+  fill: $blu-brand-color;
+}
 }
 
-.block-name {
+.form__tooltip {
   color: #fff;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
@@ -172,27 +178,28 @@
   opacity: 0;
 
   transition: opacity 500ms ease 500ms;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid rgb(255, 255, 255);
+  }
+
+  .&::after {
+    border-top: 10px solid transparent;
+    bottom: -19px;
+  }
+
+  .form__field:hover & {
+    opacity: 1;
+  }
 }
 
-.block-name::before,
-.block-name::after {
-  content: '';
-  position: absolute;
-  right: 10px;
-  bottom: -20px;
-  border: 10px solid transparent;
-  border-top: 10px solid rgb(255, 255, 255);
-}
-.block-name::after {
-  border-top: 10px solid transparent;
-  bottom: -19px;
-}
-
-.form-field:hover .block-name {
-  opacity: 1;
-}
-
-.form-chekbox {
+.form__chekbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,11 +211,7 @@
   }
 }
 
-.chekbox-input:focus + .chekbox-icon {
-  border: 1px solid $blu-brand-color;
-}
-
-.chekbox-icon {
+.chekbox__icon {
   display: inline-block;
 
   width: 15px;
@@ -220,25 +223,25 @@
 
   background-color: transparent;
   transition: background-color 250ms ease;
+
+  .chekbox__input:focus ~ & {
+    border: 1px solid $blu-brand-color;
+  }
+
+  .chekbox__input:checked ~ & {
+    background-color: $blu-brand-color;
+    border: transparent;
+
+    background-image: url(/images/box-modal/icon-check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-origin: border-box;
+  }
 }
 
-.chekbox-input:focus .chekbox-icon {
-  background-color: $blu-brand-color;
-}
-
-.chekbox-input:checked ~ .chekbox-icon {
-  background-color: $blu-brand-color;
-  border: transparent;
-
-  background-image: url(/images/box-modal/icon-check.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  background-origin: border-box;
-}
-
-.chekbox-text {
+.chekbox__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
@@ -248,7 +251,7 @@
 
   margin-left: 8px;
 }
-.chekbox-text-accent {
+.chekbox__text-accent {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
@@ -258,7 +261,7 @@
   color: $blu-brand-color;
 }
 
-.form-btn {
+.form__btn {
   display: block;
 
   font-weight: 700;
@@ -281,10 +284,10 @@
   cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-btn:hover {
-  background-color: rgb(18, 18, 18);
+  &:hover {
+    background-color: rgb(18, 18, 18);
+  }
 }
 
 .closed {
@@ -308,7 +311,6 @@
 }
 
 .closed__icon {
-  
   width: 11px;
   height: 11px;
   fill: currentColor;

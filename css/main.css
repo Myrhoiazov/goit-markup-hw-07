@@ -1000,7 +1000,7 @@ summary {
   transform: scale(0);
 }
 
-.form-title {
+.form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -1010,7 +1010,7 @@ summary {
   margin-bottom: 12px;
 }
 
-.form-field {
+.form__field {
   position: relative;
   display: block;
   width: 100%;
@@ -1019,16 +1019,16 @@ summary {
   margin-bottom: 10px;
 }
 
-.form-field:focus-within .icon {
+.form__field:focus-within .icon {
   fill: #2196f3;
 }
 
-.form-field:focus-within .form-label,
-.form-field:focus-within .textarea-label {
+.form__field:focus-within .form__label,
+.form__field:focus-within .textarea__label {
   color: #2196f3;
 }
 
-.form-input {
+.form__input {
   display: inline-block;
   width: 100%;
   height: 40px;
@@ -1040,16 +1040,16 @@ summary {
   border-radius: 4px;
 }
 
-.form-input:focus {
+.form__input:focus {
   border-color: #2196f3;
   outline: none;
 }
 
-.form-input:hover {
+.form__input:hover {
   border-color: #2196f3;
 }
 
-.form-label {
+.form__label {
   display: inline-block;
   font-weight: 400;
   font-size: 12px;
@@ -1063,7 +1063,7 @@ summary {
   position: relative;
 }
 
-.textarea-label {
+.textarea__label {
   display: inline-block;
   font-weight: 400;
   font-size: 12px;
@@ -1073,7 +1073,7 @@ summary {
   margin-bottom: 4px;
 }
 
-.form-area {
+.form__area {
   display: block;
   height: 120px;
   padding: 12px 16px;
@@ -1084,7 +1084,7 @@ summary {
   resize: none;
 }
 
-.form-icon {
+.form__icon {
   display: inline-block;
   position: absolute;
   top: 55%;
@@ -1098,7 +1098,7 @@ summary {
   height: 12px;
 }
 
-.block-name {
+.form__tooltip {
   color: #fff;
   border: 1px solid white;
   border-radius: 10px;
@@ -1113,8 +1113,7 @@ summary {
   transition: opacity 500ms ease 500ms;
 }
 
-.block-name::before,
-.block-name::after {
+.form__tooltip::before, .form__tooltip::after {
   content: '';
   position: absolute;
   right: 10px;
@@ -1123,31 +1122,31 @@ summary {
   border-top: 10px solid white;
 }
 
-.block-name::after {
+.form__tooltip .form__tooltip::after {
   border-top: 10px solid transparent;
   bottom: -19px;
 }
 
-.form-field:hover .block-name {
+.form__field:hover .form__tooltip {
   opacity: 1;
 }
 
-.form-chekbox {
+.form__chekbox {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.form-chekbox:focus {
+.form__chekbox:focus {
   border: 1px solid #2196f3;
 }
 
-.chekbox-input:focus + .chekbox-icon {
+.chekbox__input:focus ~ .chekbox__icon {
   border: 1px solid #2196f3;
 }
 
-.chekbox-icon {
+.chekbox__icon {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -1157,11 +1156,7 @@ summary {
   transition: background-color 250ms ease;
 }
 
-.chekbox-input:focus .chekbox-icon {
-  background-color: #2196f3;
-}
-
-.chekbox-input:checked ~ .chekbox-icon {
+.chekbox__input:checked ~ .chekbox__icon {
   background-color: #2196f3;
   border: transparent;
   background-image: url(/images/box-modal/icon-check.svg);
@@ -1171,7 +1166,7 @@ summary {
   background-origin: border-box;
 }
 
-.chekbox-text {
+.chekbox__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
@@ -1180,7 +1175,7 @@ summary {
   margin-left: 8px;
 }
 
-.chekbox-text-accent {
+.chekbox__text-accent {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
@@ -1189,7 +1184,7 @@ summary {
   color: #2196f3;
 }
 
-.form-btn {
+.form__btn {
   display: block;
   font-weight: 700;
   font-size: 16px;
@@ -1207,7 +1202,7 @@ summary {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-btn:hover {
+.form__btn:hover {
   background-color: #121212;
 }
 
