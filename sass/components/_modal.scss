@@ -189,7 +189,7 @@
     border-top: 10px solid rgb(255, 255, 255);
   }
 
-  .&::after {
+  &::after {
     border-top: 10px solid transparent;
     bottom: -19px;
   }
