@@ -557,19 +557,17 @@ body {
 
 .progress__items {
   display: flex;
-  justify-content: space-between;
 }
 
 .progress__item {
   position: relative;
-  list-style: none;
-  margin-right: 30px;
-  list-style: none;
+  max-width: calc((100% - 2 * 30px) / 3);
+  width: 100%;
   margin-right: 30px;
 }
 
 .progress__item :nth-child(3) {
-  margin: 0;
+  margin-right: 0;
 }
 
 .progress__img {
