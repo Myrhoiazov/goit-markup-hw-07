@@ -1,22 +1,32 @@
-.our-progress {
+.progress {
     padding-bottom: 94px;
   }
+
+  .progress__items {
+    display: flex;
+    justify-content: space-between;
+  }
   
-  .progress-link {
+  .progress__item {
     position: relative;
     list-style: none;
     margin-right: 30px;
+
+    list-style: none;
+    margin-right: 30px;
+
+    :nth-child(3) {
+      margin: 0;
+    }
   }
+
   
-  .progress-link:nth-child(3) {
-    margin: 0;
-  }
-  
-  .progress-img {
+  .progress__img {
     display: block;
   }
+
   
-  .progress-text {
+  .progress__text {
     position: absolute;
     width: 100%;
     left: 0;

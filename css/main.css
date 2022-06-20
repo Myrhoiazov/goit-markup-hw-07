@@ -551,25 +551,32 @@ body {
   margin-right: 30px;
 }
 
-.our-progress {
+.progress {
   padding-bottom: 94px;
 }
 
-.progress-link {
+.progress__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress__item {
   position: relative;
+  list-style: none;
+  margin-right: 30px;
   list-style: none;
   margin-right: 30px;
 }
 
-.progress-link:nth-child(3) {
+.progress__item :nth-child(3) {
   margin: 0;
 }
 
-.progress-img {
+.progress__img {
   display: block;
 }
 
-.progress-text {
+.progress__text {
   position: absolute;
   width: 100%;
   left: 0;
@@ -629,6 +636,11 @@ body {
 
 .team-content {
   padding: 30px 0;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .social {
