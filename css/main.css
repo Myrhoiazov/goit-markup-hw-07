@@ -276,6 +276,28 @@ summary {
   display: list-item;
 }
 
+body {
+  font-family: 'Roboto';
+  color: #212121;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
 .header {
   position: fixed;
   z-index: 999;
@@ -469,7 +491,22 @@ summary {
   padding-bottom: 94px;
 }
 
-.our-work-img {
+.our-work__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-work__link {
+  width: 270px;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.our-work__linkk:nth-child(4) {
+  margin: 0;
+}
+
+.our-work__img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -478,35 +515,6 @@ summary {
   background-color: #f5f4fa;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.antenna,
-.clock,
-.diagram,
-.astronaut {
-  width: 70px;
-  height: 70px;
-}
-
-.our-work-list,
-.progress-list,
-.team-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.our-work-link {
-  width: 270px;
-}
-
-.our-work-link,
-.progress-link {
-  list-style: none;
-  margin-right: 30px;
-}
-
-.our-work-link:nth-child(4) {
-  margin: 0;
 }
 
 .our-work__title {
@@ -525,6 +533,22 @@ summary {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.our-work__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.progress-list,
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-link {
+  list-style: none;
+  margin-right: 30px;
 }
 
 .our-progress {
@@ -1284,27 +1308,5 @@ summary {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #2196f3;
-}
-
-body {
-  font-family: 'Roboto';
-  color: #212121;
-  background-color: #fff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
 }
 /*# sourceMappingURL=main.css.map */
