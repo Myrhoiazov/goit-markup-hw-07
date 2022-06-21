@@ -21,3 +21,11 @@ body {
   
     margin-bottom: 50px;
   }
+  
+
+  @mixin centerFlex ($type: flex, $justCont: center, $Wrap: wrap) {
+  display: $type;
+  justify-content: $justCont;
+  flex-wrap: $Wrap;
+    
+  }

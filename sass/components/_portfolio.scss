@@ -8,15 +8,15 @@
 }
 
 .portfolio__items {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  
+  @include centerFlex();
 
   margin-bottom: 50px;
   margin-top: 0;
 }
 
 .portfolio__btn {
+
   font-weight: 500;
   color: $black-brand-color;
   font-size: 16px;
@@ -46,8 +46,7 @@
 // Portfolio Card
 
 .portfolio__cards {
-  display: flex;
-  flex-wrap: wrap;
+  @include centerFlex($justCont: flex-start);
 
   margin: -15px;
 }
@@ -82,8 +81,6 @@
   }
 }
 
-
-
 .card__inner {
   position: relative;
   overflow: hidden;
@@ -109,7 +106,6 @@
   }
 }
 
-
 .card__subtext {
   position: absolute;
   top: 0;
@@ -133,11 +129,10 @@
   }
 }
 
-
 .card__content {
   padding: 20px 24px;
 
-  & .card__title {
+  .card__title {
     font-weight: 700;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -147,7 +142,7 @@
     margin-bottom: 4px;
   }
   
-  & .card__subtitle {
+  .card__subtitle {
     font-weight: 400;
     color: $grey-brand-color;
     line-height: 1.8;

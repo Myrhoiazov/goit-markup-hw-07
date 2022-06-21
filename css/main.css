@@ -750,6 +750,7 @@ body {
 
 .portfolio__cards {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: -15px;
 }
